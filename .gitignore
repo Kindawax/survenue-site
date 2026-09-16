@@ -1,0 +1,16 @@
+# Système
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Éditeurs
+.vscode/
+.idea/
+*.swp
+
+# Outils (aucun n'est utilisé, par précaution)
+node_modules/
+.vercel/
+.env
+.env.*
+*.log
