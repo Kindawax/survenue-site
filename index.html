@@ -12,6 +12,11 @@
   <meta property="og:description" content="Survenue détecte les reprises, créations, changements de dirigeants et autres événements commerciaux pour transformer les signaux publics en opportunités de prospection qualifiées.">
   <meta property="og:locale" content="fr_FR">
   <meta property="og:site_name" content="Survenue">
+  <meta property="og:image" content="https://survenue.com/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Survenue — Détectez les événements qui créent des opportunités commerciales">
+  <meta name="twitter:card" content="summary_large_image">
   <meta name="theme-color" content="#FAFAF7">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,14 +35,13 @@
     </a>
     <nav class="nav__links" id="navLinks" aria-label="Navigation principale">
       <a href="#comment">Comment ça marche</a>
-      <a href="#exemple">Exemple</a>
-      <a href="#pour-qui">Pour qui ?</a>
-      <a href="#tarifs">Tarifs</a>
+      <a href="#exemple">Exemples</a>
+      <a href="#offres">Offres</a>
       <a href="#faq">FAQ</a>
-      <a class="btn btn--primary nav__cta-mobile" href="https://buy.stripe.com/cNi8wO5a39Pne6p6eC5AQ00">Tester Survenue — 49 €</a>
+      <a class="btn btn--primary nav__cta-mobile" href="#offres">Voir les offres</a>
     </nav>
     <div class="nav__actions">
-      <a class="btn btn--primary btn--sm nav__cta" href="https://buy.stripe.com/cNi8wO5a39Pne6p6eC5AQ00">Tester Survenue</a>
+      <a class="btn btn--primary btn--sm nav__cta" href="#offres">Voir les offres</a>
       <button class="nav__toggle" id="navToggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="navLinks">
         <span></span><span></span>
       </button>
@@ -51,14 +55,14 @@
 <section class="hero" id="hero">
   <div class="container hero__grid">
     <div class="hero__copy">
-      <p class="eyebrow"><span class="dot dot--live" aria-hidden="true"></span>Opportunités issues d'événements récents</p>
-      <h1>Vos meilleurs prospects sont parfois ceux qui viennent de changer.</h1>
-      <p class="lead">Survenue détecte les événements qui créent des opportunités commerciales, puis les qualifie et les enrichit pour votre prospection.</p>
+      <p class="eyebrow"><span class="dot dot--live" aria-hidden="true"></span>Intelligence commerciale à partir d'événements publics</p>
+      <h1>Détectez les événements qui créent des opportunités commerciales.</h1>
+      <p class="lead">Survenue surveille des données publiques, identifie les événements pertinents, enrichit les entreprises concernées et transforme ces signaux en opportunités commerciales exploitables par votre équipe.</p>
       <div class="hero__cta">
-        <a class="btn btn--primary btn--lg" href="https://buy.stripe.com/cNi8wO5a39Pne6p6eC5AQ00">Tester Survenue</a>
+        <a class="btn btn--primary btn--lg" href="#offres">Voir les offres</a>
         <a class="btn btn--ghost btn--lg" href="#exemple">Voir un exemple</a>
       </div>
-      <p class="hero__note"><span>5 opportunités</span><span aria-hidden="true">•</span><span>49 €</span><span aria-hidden="true">•</span><span>Sans engagement</span></p>
+      <p class="hero__note"><span>Test ponctuel ou livraison hebdomadaire</span><span aria-hidden="true">•</span><span>Sans engagement</span><span aria-hidden="true">•</span><span>Chaque fiche vérifiée avant envoi</span></p>
     </div>
 
     <div class="hero__visual" aria-hidden="true">
@@ -75,13 +79,14 @@
             <li><span>Dirigeants</span><strong>2 nommés</strong></li>
             <li><span>Prix de cession</span><strong>publié</strong></li>
             <li><span>Sources</span><strong>recoupées</strong></li>
+            <li><span>Coordonnées</span><strong>nature précisée</strong></li>
           </ul>
         </div>
-        <div class="flow__link"><span></span></div>
+        <div class="flow__link"><span></span><b>Enrichissement</b></div>
         <div class="flow__card flow__card--out">
           <div class="flow__bar"><span class="flow__label">Opportunité commerciale</span></div>
           <div class="flow__title">Prête pour votre équipe</div>
-          <div class="flow__meta">Contexte · coordonnées · nature précisée</div>
+          <div class="flow__meta">Contexte · coordonnées · niveau de confiance</div>
         </div>
       </div>
     </div>
@@ -100,7 +105,7 @@
     <article class="opp reveal" aria-label="Exemple d'opportunité : La Dauphinoise">
       <div class="opp__bar">
         <span class="opp__bar-left"><span class="dot dot--live" aria-hidden="true"></span>Événement détecté</span>
-        <span class="opp__bar-right">Fiche opportunité · Rhône (69)</span>
+        <span class="opp__bar-right">Fiche opportunité · Rhône (69) · <strong>Confiance élevée</strong></span>
       </div>
 
       <div class="opp__head">
@@ -127,7 +132,7 @@
         <div class="opp__contact-item">
           <span class="opp__contact-label">Téléphone</span>
           <span class="opp__contact-value">04 78 54 50 66</span>
-          <span class="chip">📞 Téléphone public de l'établissement</span>
+          <span class="chip"><span aria-hidden="true">📞</span> Téléphone public de l'établissement</span>
         </div>
         <div class="opp__contact-item">
           <span class="opp__contact-label">Email</span>
@@ -139,8 +144,35 @@
       <div class="opp__foot">
         <p class="opp__context"><strong>Contexte.</strong> Un commerce existant vient de changer de propriétaire. Pour un fournisseur de caisse, d'équipement ou de services aux commerces, ce type d'événement peut correspondre à un moment commercial pertinent.</p>
         <p class="opp__sources"><span class="check" aria-hidden="true">✓</span><strong>Sources publiques recoupées</strong> — annonce BODACC du 06/09/2026 · Registre national des entreprises (dirigeants) · annuaire professionnel (téléphone de l'établissement)</p>
+        <p class="opp__sources"><strong>Niveau de confiance : élevé</strong> — acte de cession enregistré, dirigeants inscrits au registre, téléphone issu d'un annuaire professionnel.</p>
       </div>
     </article>
+
+    <div class="opp-mini-wrap reveal">
+      <article class="opp opp--mini" aria-label="Exemple d'opportunité : nouvel organisme de formation">
+        <div class="opp__bar">
+          <span class="opp__bar-left"><span class="dot dot--live" aria-hidden="true"></span>Événement détecté</span>
+          <span class="opp__bar-right">Exemple réel, anonymisé · Puy-de-Dôme (63) · <strong>Confiance élevée</strong></span>
+        </div>
+        <div class="opp__head">
+          <div class="opp__id">
+            <span class="opp__event">Nouvelle déclaration d'activité — organisme de formation</span>
+            <h3 class="opp__name opp__name--sm">Cabinet de conseil et de coaching</h3>
+            <p class="opp__meta">SARL créée en 2023 · déclaration enregistrée le 07/09/2026</p>
+          </div>
+        </div>
+        <dl class="opp__facts opp__facts--mini">
+          <div><dt>Dirigeante</dt><dd>Identifiée (gérante, registre national des entreprises)</dd></div>
+          <div><dt>Email professionnel</dt><dd>Trouvé — mentions légales du site de la société</dd></div>
+          <div><dt>LinkedIn</dt><dd>Profil identifié — lien depuis le site de la société</dd></div>
+          <div><dt>Téléphone</dt><dd>Numéro de contact affiché sur le site</dd></div>
+        </dl>
+        <div class="opp__foot">
+          <p class="opp__context"><strong>Contexte.</strong> Une société établie vient de déclarer une activité de formation. Pour un cabinet qui accompagne les organismes de formation (certification, structuration, développement), c'est le moment où le besoin apparaît.</p>
+          <p class="opp__sources"><span class="check" aria-hidden="true">✓</span><strong>Sources</strong> — liste publique des organismes de formation (ministère du Travail) · registre national des entreprises · site de la société. Les coordonnées exactes sont livrées au client ; elles ne sont pas publiées ici.</p>
+        </div>
+      </article>
+    </div>
   </div>
 </section>
 
@@ -161,7 +193,15 @@
   <div class="container">
     <div class="section__head reveal">
       <h2>La plupart des bases vous disent <em>qui</em> contacter. Survenue cherche à vous dire <em>pourquoi maintenant</em>.</h2>
+      <p class="sub">Vos meilleurs prospects sont parfois ceux qui viennent de changer. Encore faut-il le savoir à temps — et aujourd'hui, ce travail se fait à la main.</p>
     </div>
+    <ol class="pain reveal" aria-label="Ce qui prend du temps à une équipe commerciale">
+      <li><span>01</span>Chercher les événements dans des sources dispersées</li>
+      <li><span>02</span>Croiser les annonces, les registres, les annuaires</li>
+      <li><span>03</span>Vérifier que l'entreprise et l'événement correspondent</li>
+      <li><span>04</span>Trouver le bon interlocuteur et un moyen de le joindre</li>
+      <li><span>05</span>Qualifier : est-ce vraiment une opportunité ?</li>
+    </ol>
     <div class="compare reveal">
       <div class="compare__col">
         <p class="compare__title">Base classique</p>
@@ -206,14 +246,23 @@
       <li class="tl">
         <div class="tl__node"><span>02</span></div>
         <h3>Qualification</h3>
-        <p>Nous trions, recoupons et enrichissons les informations afin de distinguer un simple événement d'une opportunité exploitable.</p>
+        <p>Nous trions et recoupons les informations pour distinguer un simple événement d'une opportunité qui correspond à vos critères.</p>
       </li>
       <li class="tl">
         <div class="tl__node"><span>03</span></div>
+        <h3>Enrichissement</h3>
+        <p>Nous complétons chaque entreprise avec ce qui permet d'agir : dirigeant, coordonnées disponibles, contexte, sources.</p>
+      </li>
+      <li class="tl">
+        <div class="tl__node"><span>04</span></div>
         <h3>Livraison</h3>
-        <p>Vous recevez uniquement les opportunités correspondant à vos critères.</p>
+        <p>Vous recevez les opportunités par email, en une fois ou chaque semaine, prêtes à être traitées.</p>
       </li>
     </ol>
+    <div class="how-note reveal">
+      <p><strong>Aujourd'hui</strong>, chaque fiche est vérifiée par une personne avant envoi : la détection et le tri sont de plus en plus automatisés, la validation reste humaine.</p>
+      <p><strong>L'objectif</strong> : que vous définissiez vos critères une fois, puis receviez vos opportunités en continu — en gardant une validation humaine sur les cas qui comptent.</p>
+    </div>
   </div>
 </section>
 
@@ -226,7 +275,7 @@
     </div>
 
     <div class="receive reveal">
-      <div class="sheet" aria-label="Contenu d'une fiche opportunité">
+      <div class="sheet" role="group" aria-label="Contenu d'une fiche opportunité">
         <div class="sheet__bar"><span class="dot dot--live" aria-hidden="true"></span>Fiche opportunité <span class="sheet__bar-note">exemple réel</span></div>
         <dl class="sheet__rows">
           <div class="sheet__row"><dt>Événement</dt><dd>Reprise d'un fonds de commerce</dd></div>
@@ -240,6 +289,7 @@
           <div class="sheet__row"><dt>Prix</dt><dd>317 250 €</dd></div>
           <div class="sheet__row"><dt>Source</dt><dd>BODACC · RNE · annuaire professionnel</dd></div>
           <div class="sheet__row"><dt>Contexte</dt><dd>Changement de propriétaire d'un commerce existant</dd></div>
+          <div class="sheet__row"><dt>Niveau de confiance</dt><dd>Élevé — acte enregistré, dirigeants au registre</dd></div>
         </dl>
       </div>
 
@@ -250,9 +300,10 @@
           <li>Téléphone direct</li>
           <li>Téléphone d'établissement</li>
           <li>Email professionnel</li>
+          <li>Profil LinkedIn du dirigeant</li>
           <li>Coordonnée liée à l'ancienne enseigne</li>
         </ul>
-        <p class="muted">Quand une ligne directe n'est pas publiquement identifiable, la fiche le dit. Jamais de portable deviné.</p>
+        <p class="muted">Quand une ligne directe n'est pas publiquement identifiable, la fiche le dit. Jamais de portable deviné. Selon vos critères, la fiche inclut le profil LinkedIn du dirigeant et un niveau de confiance.</p>
       </div>
     </div>
   </div>
@@ -273,8 +324,8 @@
       </article>
       <article class="card reveal reveal--delay">
         <span class="glyph glyph--circle" aria-hidden="true"></span>
-        <h3>Logiciels &amp; SaaS B2B</h3>
-        <p>Identifiez les entreprises au moment où un nouveau besoin peut apparaître.</p>
+        <h3>Conseil aux organismes de formation</h3>
+        <p>Recevez chaque semaine les organismes nouvellement déclarés dans votre région, avec le dirigeant, l'email professionnel et le profil LinkedIn lorsqu'ils sont disponibles.</p>
       </article>
       <article class="card reveal reveal--delay2">
         <span class="glyph glyph--bars" aria-hidden="true"></span>
@@ -283,8 +334,8 @@
       </article>
       <article class="card reveal reveal--delay3">
         <span class="glyph glyph--ring" aria-hidden="true"></span>
-        <h3>Services aux entreprises</h3>
-        <p>Adaptez les signaux à votre marché, votre zone et votre cible.</p>
+        <h3>Services aux entreprises &amp; logiciels B2B</h3>
+        <p>Identifiez les entreprises au moment où un nouveau besoin peut apparaître, sur votre zone et votre cible.</p>
       </article>
     </div>
   </div>
@@ -300,26 +351,27 @@
     <div class="signals">
       <article class="sig reveal"><span class="sig__idx">01</span><h3>Reprise</h3><p>Une entreprise change de propriétaire.</p></article>
       <article class="sig reveal reveal--delay"><span class="sig__idx">02</span><h3>Création</h3><p>Une nouvelle société apparaît sur votre marché.</p></article>
-      <article class="sig reveal reveal--delay2"><span class="sig__idx">03</span><h3>Nouvelle implantation</h3><p>Un établissement ouvre un nouveau site.</p></article>
+      <article class="sig reveal reveal--delay2"><span class="sig__idx">03</span><h3>Nouvelle déclaration d'activité</h3><p>Une société déclare une nouvelle activité, par exemple d'organisme de formation.</p></article>
       <article class="sig reveal"><span class="sig__idx">04</span><h3>Changement de dirigeant</h3><p>Une nouvelle personne prend la direction.</p></article>
-      <article class="sig reveal reveal--delay"><span class="sig__idx">05</span><h3>Déménagement</h3><p>Une entreprise change de localisation.</p></article>
-      <article class="sig reveal reveal--delay2"><span class="sig__idx">06</span><h3>Autres signaux</h3><p>Définis selon vos besoins commerciaux.</p></article>
+      <article class="sig reveal reveal--delay"><span class="sig__idx">05</span><h3>Nouvelle implantation</h3><p>Un établissement ouvre un nouveau site.</p></article>
+      <article class="sig reveal reveal--delay2"><span class="sig__idx">06</span><h3>Autres signaux</h3><p>Déménagement, transfert de siège, levée de fonds… définis selon vos besoins commerciaux.</p></article>
     </div>
   </div>
 </section>
 
-<!-- PRICING -->
-<section class="section" id="tarifs">
+<!-- OFFRES -->
+<section class="section" id="offres">
+  <span id="tarifs" class="anchor-alias" aria-hidden="true"></span>
   <div class="container">
     <div class="section__head section__head--center reveal">
-      <h2>Commencez par tester.</h2>
-      <p class="sub">Un premier lot, sur vos critères, pour juger sur pièces.</p>
+      <h2>Deux façons de commencer.</h2>
+      <p class="sub">Un test ponctuel pour juger sur pièces, ou un service récurrent adapté à vos critères.</p>
     </div>
 
     <div class="pricing reveal">
       <div class="price">
         <div class="price__head">
-          <p class="price__name">Test Survenue</p>
+          <p class="price__name">Test ponctuel</p>
           <p class="price__amount"><span class="price__num">49 €</span><span class="price__once">paiement unique</span></p>
           <p class="price__what">5 opportunités commerciales qualifiées</p>
         </div>
@@ -327,7 +379,7 @@
           <li>Sélection selon vos critères</li>
           <li>Informations recoupées</li>
           <li>Contexte de l'événement</li>
-          <li>Coordonnées disponibles</li>
+          <li>Coordonnées disponibles, nature précisée</li>
           <li>Sources</li>
           <li>Livraison par email</li>
         </ul>
@@ -336,11 +388,24 @@
         <p class="price__after">Après règlement, vous nous indiquez votre activité, votre zone et vos cibles. Les 5 fiches arrivent par email.</p>
       </div>
 
-      <aside class="price price--next">
-        <p class="price__name">Besoin d'un flux régulier ?</p>
-        <p class="price--next__text">Nous construisons ensuite une offre adaptée à votre secteur, votre zone et votre volume.</p>
-        <a class="btn btn--ghost btn--block" href="mailto:contact.signal.tm@gmail.com?subject=Survenue%20%E2%80%94%20flux%20r%C3%A9gulier">Parler à Survenue</a>
-      </aside>
+      <div class="price price--weekly">
+        <div class="price__head">
+          <p class="price__name">Enrichissement commercial hebdomadaire</p>
+          <p class="price__amount"><span class="price__num price__num--text">Chaque lundi</span></p>
+          <p class="price__what">Un service récurrent adapté à vos critères, avec livraison hebdomadaire.</p>
+        </div>
+        <ul class="list list--check">
+          <li>Critères définis ensemble : zone, secteur, type de société, événements</li>
+          <li>Minimum 5 sociétés qualifiées par semaine selon les critères convenus ; environ 10 lorsque le volume et la qualité le permettent</li>
+          <li>Dirigeant, email professionnel et profil LinkedIn lorsqu'ils sont disponibles et vérifiés</li>
+          <li>Sources indiquées pour chaque information</li>
+          <li>Sociétés identifiées sans contact public transmises à part, non comptées</li>
+          <li>Sans engagement, arrêt possible chaque mois</li>
+        </ul>
+        <a class="btn btn--primary btn--lg btn--block" href="mailto:contact.signal.tm@gmail.com?subject=Survenue%20%E2%80%94%20enrichissement%20hebdomadaire">Parler à Survenue</a>
+        <p class="price__terms"><span>Tarif communiqué après échange sur vos critères</span></p>
+        <p class="price__after">Nous définissons ensemble le périmètre, puis la première livraison part le lundi suivant.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -373,6 +438,18 @@
         <p>Oui. Le test comprend 5 opportunités pour 49 €, sans engagement.</p>
       </details>
       <details>
+        <summary>Comment se passe la livraison hebdomadaire ?</summary>
+        <p>Nous définissons ensemble vos critères (zone, secteur, type de société, événements). Chaque lundi, vous recevez par email un tableau des sociétés qualifiées de la semaine, avec pour chacune le dirigeant, les coordonnées trouvées et leur nature, et les sources. Les sociétés identifiées sans contact public sont transmises à part.</p>
+      </details>
+      <details>
+        <summary>Puis-je arrêter quand je veux ?</summary>
+        <p>Oui. Le service hebdomadaire est sans engagement : vous pouvez l'arrêter à tout moment pour la période suivante.</p>
+      </details>
+      <details>
+        <summary>Que signifie « vérifié » ?</summary>
+        <p>Qu'une information a été lue sur une source publique identifiable — registre officiel, annonce légale, site de la société, annuaire professionnel — et que cette source est indiquée sur la fiche. Nous ne devinons jamais un email ni un numéro ; quand une donnée n'est pas trouvée, la fiche le dit.</p>
+      </details>
+      <details>
         <summary>Les informations sont-elles toujours disponibles avant l'événement ?</summary>
         <p>Pas nécessairement. Certains signaux sont détectables avant qu'un besoin ne se matérialise, d'autres deviennent visibles publiquement après l'événement. Nous indiquons les dates disponibles afin de rendre ce délai transparent.</p>
       </details>
@@ -385,10 +462,10 @@
   <div class="container final__inner reveal">
     <span class="final__mark" aria-hidden="true"></span>
     <h2>Et si votre prochain prospect était déjà en train de changer ?</h2>
-    <p class="final__sub">Testez Survenue sur 5 opportunités correspondant à vos critères.</p>
+    <p class="final__sub">Testez Survenue sur 5 opportunités, ou parlons de vos critères pour une livraison chaque semaine.</p>
     <div class="final__cta">
       <a class="btn btn--light btn--lg" href="https://buy.stripe.com/cNi8wO5a39Pne6p6eC5AQ00">Tester Survenue — 49 €</a>
-      <a class="btn btn--outline btn--lg" href="mailto:contact.signal.tm@gmail.com?subject=Survenue">Nous contacter</a>
+      <a class="btn btn--outline btn--lg" href="mailto:contact.signal.tm@gmail.com?subject=Survenue%20%E2%80%94%20enrichissement%20hebdomadaire">Parler à Survenue</a>
     </div>
   </div>
 </section>
@@ -405,9 +482,9 @@
       <nav class="footer__col" aria-label="Plan du site">
         <p class="footer__title">Site</p>
         <a href="#comment">Comment ça marche</a>
-        <a href="#exemple">Exemple</a>
+        <a href="#exemple">Exemples</a>
         <a href="#pour-qui">Pour qui ?</a>
-        <a href="#tarifs">Tarifs</a>
+        <a href="#offres">Offres</a>
         <a href="#faq">FAQ</a>
       </nav>
       <nav class="footer__col" aria-label="Contact et informations légales">
