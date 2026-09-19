@@ -1,67 +1,42 @@
-// SURVENUE — interactions minimales : nav mobile, état sticky, apparition au scroll.
-(function () {
-  document.documentElement.classList.remove('no-js');
+(() => {
+document.documentElement.classList.remove('no-js');
+const menu=document.querySelector('.menu'),nav=document.querySelector('#navigation');
+const close=()=>{nav?.classList.remove('open');menu?.setAttribute('aria-expanded','false');menu?.setAttribute('aria-label','Ouvrir le menu');};
+menu?.addEventListener('click',()=>{const open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));menu.setAttribute('aria-label',open?'Fermer le menu':'Ouvrir le menu');});
+nav?.querySelectorAll('a').forEach(a=>a.addEventListener('click',close));
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&nav?.classList.contains('open')){close();menu.focus();}});
+document.addEventListener('click',e=>{if(!e.target.closest('.new-nav'))close();});
+const buttons=document.querySelectorAll('[data-example]');
+buttons.forEach(button=>button.addEventListener('click',()=>buttons.forEach(item=>{const active=item===button;item.classList.toggle('selected',active);item.setAttribute('aria-pressed',String(active));document.getElementById(item.dataset.example).hidden=!active;})));
 
-  // Nav mobile
-  var toggle = document.getElementById('navToggle');
-  var links = document.getElementById('navLinks');
-  if (toggle && links) {
-    toggle.addEventListener('click', function () {
-      var open = links.classList.toggle('is-open');
-      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-      toggle.setAttribute('aria-label', open ? 'Fermer le menu' : 'Ouvrir le menu');
-    });
-    links.querySelectorAll('a').forEach(function (a) {
-      a.addEventListener('click', function () {
-        links.classList.remove('is-open');
-        toggle.setAttribute('aria-expanded', 'false');
-      });
-    });
-    document.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape' && links.classList.contains('is-open')) {
-        links.classList.remove('is-open');
-        toggle.setAttribute('aria-expanded', 'false');
-        toggle.focus();
-      }
-    });
+// Respect system preferences and provide a visible pause for decorative motion.
+const motionControl = document.querySelector('#motion-toggle');
+const preference = window.matchMedia('(prefers-reduced-motion: reduce)');
+let paused = preference.matches;
+function applyMotion() {
+  document.body.classList.toggle('motion-paused', paused);
+  if (motionControl) {
+    motionControl.setAttribute('aria-pressed', String(paused));
+    motionControl.setAttribute('aria-label', paused ? 'Activer les animations' : 'Mettre les animations en pause');
+    motionControl.textContent = paused ? 'Activer le mouvement ↗' : 'Pause mouvement Ⅱ';
   }
-
-  // Bordure de la nav après scroll
-  var nav = document.getElementById('nav');
-  function onScroll() {
-    if (!nav) return;
-    nav.classList.toggle('is-scrolled', window.scrollY > 8);
-  }
-  onScroll();
-  window.addEventListener('scroll', onScroll, { passive: true });
-
-  // Apparition au scroll
-  var items = document.querySelectorAll('.reveal');
-  if (!('IntersectionObserver' in window)) {
-    items.forEach(function (el) { el.classList.add('is-visible'); });
-    return;
-  }
-  var io = new IntersectionObserver(function (entries) {
-    entries.forEach(function (entry) {
+}
+applyMotion();
+motionControl?.addEventListener('click', () => { paused = !paused; applyMotion(); });
+preference.addEventListener('change', event => { paused = event.matches; applyMotion(); });
+if ('IntersectionObserver' in window && motionControl) {
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
       if (entry.isIntersecting) {
-        entry.target.classList.add('is-visible');
-        io.unobserve(entry.target);
+        entry.target.classList.add('entered');
+        observer.unobserve(entry.target);
       }
     });
-  }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
-  items.forEach(function (el) { io.observe(el); });
-
-  // Filet de sécurité : si l'observer ne se déclenche pas (onglet en arrière-plan,
-  // navigateur particulier), on révèle ce qui est dans la fenêtre au scroll.
-  function revealInView() {
-    var h = window.innerHeight;
-    items.forEach(function (el) {
-      if (el.classList.contains('is-visible')) return;
-      var r = el.getBoundingClientRect();
-      if (r.top < h && r.bottom > 0) { el.classList.add('is-visible'); io.unobserve(el); }
-    });
-  }
-  window.addEventListener('scroll', revealInView, { passive: true });
-  window.addEventListener('load', revealInView);
-  setTimeout(revealInView, 300);
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.manifesto h2, .manifesto-bottom, .heading, .steps article, .new-pricing, .new-faq').forEach(section => {
+    section.classList.add('in-view-animate');
+    observer.observe(section);
+  });
+  document.body.classList.add('motion-ready');
+}
 })();
