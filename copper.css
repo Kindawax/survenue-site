@@ -10,4 +10,21 @@
 .panels .opp__contact-item,.panels .opp__facts>div{min-width:0}
 .panels .opp__contact-value,.panels .opp__facts dd{overflow-wrap:anywhere}
 .motion-paused .panels .opp{animation:none!important;opacity:1;transform:none}
+.new-pricing{grid-template-columns:repeat(3,minmax(0,1fr));align-items:stretch}
+.new-pricing .offer{display:flex;flex-direction:column;min-width:0;padding:34px 25px}
+.new-pricing .offer:first-child{padding-left:0}
+.new-pricing .offer.premium{border-left:1px solid var(--line)}
+.new-pricing .offer-top{flex-wrap:wrap;gap:12px;min-height:58px;margin-bottom:24px}
+.new-pricing .offer-top small{font-size:10px}
+.new-pricing .offer h3{font-size:28px}
+.new-pricing .amount{font-size:64px;line-height:1.15;margin-block:22px}
+.new-pricing .amount span{display:block;margin-top:8px;letter-spacing:0}
+.new-pricing .offer ul{flex:1}
+.new-pricing .offer .action{gap:12px;font-size:13px;width:100%}
+.new-pricing .offer>small{display:block;margin-top:18px;line-height:1.7}
+.pricing-note{display:grid;grid-template-columns:1.4fr 1fr;gap:40px;padding-top:30px;color:var(--muted);font-size:13px;line-height:1.8}
+.pricing-note strong{color:var(--ink)}
+.pricing-note .text-link{display:inline;font-size:inherit;text-decoration:underline;text-underline-offset:4px}
+@media(max-width:1000px){.new-pricing{grid-template-columns:1fr}.new-pricing .offer,.new-pricing .offer:first-child{padding:32px}.new-pricing .offer.premium{border-left:0;border-top:1px solid var(--line)}.new-pricing .offer.recurring{border-left:0}.new-pricing .offer-top{min-height:0}.new-pricing .offer>p{max-width:none}.new-pricing .offer .action{max-width:420px}.pricing-note{grid-template-columns:1fr;gap:18px}}
+@media(max-width:540px){.new-pricing .offer,.new-pricing .offer:first-child{padding:30px 20px;margin-inline:0}.new-pricing .offer:first-child{padding-inline:0}.new-pricing .amount{font-size:64px}.pricing-note{font-size:12px}}
 @media(prefers-reduced-motion:reduce){.copper-material{animation:none!important;will-change:auto}.motion-ready .in-view-animate{opacity:1!important;transform:none!important}.immersive-copy h1>*{animation:none!important}.panels .opp{animation:none!important}html{scroll-behavior:auto}}
