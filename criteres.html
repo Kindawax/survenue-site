@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Définir mes critères — SURVENUE</title>
+  <meta name="description" content="Définissez votre cible et les informations utiles à votre prospection. SURVENUE étudie la faisabilité avant tout paiement."><meta name="robots" content="noindex">
+  <link rel="canonical" href="https://survenue.com/criteres.html">
+                      <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#2d1b14">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="home.css">
+<link rel="stylesheet" href="copper.css">
+<link rel="stylesheet" href="onboarding.css">
+</head>
+<body class="redesign onboarding">
+<header class="intake-nav"><a class="new-brand" href="index.html" aria-label="SURVENUE, accueil">survenue.</a><a href="index.html#offres">Retour aux offres ↗</a></header>
+<main class="intake-layout">
+<aside class="intake-intro"><p class="label">VOTRE PROSPECTION, VOS CRITÈRES</p><h1>Votre marché.<br>Vos critères.<br><em>Votre prochain contact.</em></h1><p>Décrivez les entreprises et les informations qui vous aideraient à engager une conversation.</p><ol class="intake-path"><li><span aria-hidden="true">01</span><div><strong>Votre terrain</strong><p>Vous définissez votre besoin.</p></div></li><li><span aria-hidden="true">02</span><div><strong>Notre regard</strong><p>Nous vérifions ce qui est accessible.</p></div></li><li><span aria-hidden="true">03</span><div><strong>Un cadre clair</strong><p>Nous convenons du périmètre et du prix avant tout paiement.</p></div></li></ol><p class="intake-note">Aucun compte à créer. Aucune commande à cette étape.</p><a href="mailto:contact.signal.tm@gmail.com">Vous préférez nous écrire directement ?</a></aside>
+<div class="intake-card"><noscript><p>Ce parcours utilise JavaScript. Vous pouvez nous écrire à <a href="mailto:contact.signal.tm@gmail.com">contact.signal.tm@gmail.com</a> en précisant votre cible, votre zone et les coordonnées recherchées.</p></noscript>
+<form id="criteria-form" hidden novalidate>
+<p id="progress" aria-live="polite">Étape 1 sur 3 · Votre cible</p>
+<section data-step="0"><h2 tabindex="-1">Votre cible</h2><p>Les champs marqués * sont nécessaires.</p>
+<label for="activity">Que vendez-vous, et à qui ? *</label><textarea id="activity" name="activity" required maxlength="400" rows="3" placeholder="Ex. : accompagnement Qualiopi pour les organismes de formation"></textarea>
+<label for="geography">Quelle zone géographique ? *</label><input id="geography" name="geography" required maxlength="150" placeholder="Ex. : Auvergne-Rhône-Alpes">
+<label for="exclusions">Quels profils exclure ? <span>(facultatif)</span></label><input id="exclusions" name="exclusions" maxlength="200" placeholder="Ex. : entrepreneurs individuels, réseaux déjà clients">
+</section>
+<section data-step="1" hidden><h2 tabindex="-1">Ce qui vous serait utile</h2>
+<fieldset><legend>Quels événements vous intéressent ? <span>(plusieurs choix possibles)</span></legend>
+<label class="choice"><input type="checkbox" name="events" value="Reprise / changement de propriétaire"><span>Reprise / changement de propriétaire</span></label><label class="choice"><input type="checkbox" name="events" value="Création d’entreprise"><span>Création d’entreprise</span></label><label class="choice"><input type="checkbox" name="events" value="Nouvelle implantation / ouverture"><span>Nouvelle implantation / ouverture</span></label><label class="choice"><input type="checkbox" name="events" value="Nouvelle déclaration d’activité de formation"><span>Nouvelle déclaration d’activité de formation</span></label><label class="choice"><input type="checkbox" name="events" value="Changement de dirigeant"><span>Changement de dirigeant</span></label><label class="choice"><input type="checkbox" name="events" value="À définir ensemble"><span>À définir ensemble</span></label></fieldset>
+<fieldset><legend>Quelles informations sont indispensables ?</legend><label class="choice"><input type="checkbox" name="contacts" value="Email professionnel"><span>Email professionnel</span></label><label class="choice"><input type="checkbox" name="contacts" value="Téléphone professionnel"><span>Téléphone professionnel</span></label><label class="choice"><input type="checkbox" name="contacts" value="Nom du dirigeant"><span>Nom du dirigeant</span></label><label class="choice"><input type="checkbox" name="contacts" value="Profil LinkedIn du dirigeant"><span>Profil LinkedIn du dirigeant</span></label><label class="choice"><input type="checkbox" name="contacts" value="Contexte et sources de l’événement"><span>Contexte et sources de l’événement</span></label></fieldset>
+<p class="field-help">Leur disponibilité sera vérifiée. Un événement public ne prouve pas un besoin d’achat.</p>
+<label for="frequency">À quel rythme ?</label><select id="frequency" name="frequency"><option>À définir ensemble</option><option>Un premier test ponctuel</option><option>Chaque semaine</option></select>
+<label for="details">Volume souhaité, ancienneté du signal ou autre précision <span>(facultatif)</span></label><textarea id="details" name="details" maxlength="500" rows="3"></textarea>
+</section>
+<section data-step="2" hidden><h2 tabindex="-1">Votre récapitulatif</h2><p>Vos coordonnées nous permettront de vous répondre.</p>
+<label for="name">Votre nom *</label><input id="name" name="name" autocomplete="name" required maxlength="100">
+<label for="company">Votre entreprise *</label><input id="company" name="company" autocomplete="organization" required maxlength="150">
+<label for="email">Votre email professionnel *</label><input id="email" name="email" type="email" autocomplete="email" required maxlength="200">
+<details open><summary>Relire mes critères</summary><pre id="review"></pre></details>
+<p class="field-help">Ces informations restent dans cette page jusqu’à votre action. Aucun envoi automatique ni sauvegarde sur ce site. Une fois votre email envoyé, elles servent à traiter votre demande. <a href="confidentialite.html">Confidentialité</a>.</p>
+<button class="action dark" type="submit">Préparer mon email <span aria-hidden="true">↗</span></button>
+</section>
+<p id="error" role="alert"></p>
+<div class="intake-controls"><button id="back" type="button" class="text-link" hidden>← Précédent</button><button id="next" type="button" class="action dark">Continuer <span aria-hidden="true">→</span></button></div>
+</form>
+<section id="ready" hidden><h2 tabindex="-1">Votre demande est prête.</h2><p><strong>Elle n’a pas encore été envoyée.</strong> Ouvrez votre messagerie, relisez le message puis envoyez-le à SURVENUE.</p><a id="email-link" class="action dark" href="mailto:contact.signal.tm@gmail.com">Ouvrir ma messagerie ↗</a><p class="field-help">Si rien ne s’ouvre, copiez le texte ci-dessous dans un email à <a href="mailto:contact.signal.tm@gmail.com">contact.signal.tm@gmail.com</a>.</p><label for="message">Votre message</label><textarea id="message" rows="13" readonly></textarea><button type="button" id="copy" class="action">Copier le message</button><p id="copy-status" role="status"></p><button id="edit" type="button" class="text-link">← Modifier mes réponses</button></section>
+</div></main><footer class="intake-footer"><a href="mentions-legales.html">Mentions légales</a><a href="confidentialite.html">Confidentialité</a><a href="cgv.html">CGV</a></footer>
+<script src="onboarding.js" defer></script></body></html>
