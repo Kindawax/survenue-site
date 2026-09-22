@@ -40,3 +40,9 @@ if ('IntersectionObserver' in window && motionControl) {
   document.body.classList.add('motion-ready');
 }
 })();
+
+// Each preview control exposes its selected state without an automatic carousel.
+const deliveryButtons=document.querySelectorAll('[data-delivery]');
+deliveryButtons.forEach(button=>button.addEventListener('click',()=>deliveryButtons.forEach(item=>{const active=item===button;item.classList.toggle('selected',active);item.setAttribute('aria-pressed',String(active));document.getElementById(item.dataset.delivery).hidden=!active;})));
+const mobileIntake=document.querySelector('.mobile-intake');
+if(mobileIntake&&'IntersectionObserver' in window){let heroVisible=true,contactVisible=false;const refresh=()=>mobileIntake.hidden=heroVisible||contactVisible;const stickyObserver=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.target.id==='hero')heroVisible=entry.isIntersecting;if(entry.target.id==='contact')contactVisible=entry.isIntersecting;});refresh();});stickyObserver.observe(document.getElementById('hero'));stickyObserver.observe(document.getElementById('contact'));}

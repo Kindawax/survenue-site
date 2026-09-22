@@ -14,7 +14,7 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="home.css">
-<link rel="stylesheet" href="copper.css">
+<link rel="stylesheet" href="copper.css?v=20260922b">
 <link rel="stylesheet" href="onboarding.css">
 </head>
 <body class="redesign onboarding">
@@ -25,6 +25,7 @@
 <form id="criteria-form" hidden novalidate>
 <p id="progress" aria-live="polite">Étape 1 sur 3 · Votre cible</p>
 <section data-step="0"><h2 tabindex="-1">Votre cible</h2><p>Les champs marqués * sont nécessaires.</p>
+<p id="preset-note" class="field-help" hidden>Votre cible et les événements sont préremplis. Remplacez [votre offre] par votre activité ; tous les choix restent modifiables.</p>
 <label for="activity">Que vendez-vous, et à qui ? *</label><textarea id="activity" name="activity" required maxlength="400" rows="3" placeholder="Ex. : accompagnement Qualiopi pour les organismes de formation"></textarea>
 <label for="geography">Quelle zone géographique ? *</label><input id="geography" name="geography" required maxlength="150" placeholder="Ex. : Auvergne-Rhône-Alpes">
 <label for="exclusions">Quels profils exclure ? <span>(facultatif)</span></label><input id="exclusions" name="exclusions" maxlength="200" placeholder="Ex. : entrepreneurs individuels, réseaux déjà clients">
@@ -50,4 +51,4 @@
 </form>
 <section id="ready" hidden><h2 tabindex="-1">Votre demande est prête.</h2><p><strong>Elle n’a pas encore été envoyée.</strong> Ouvrez votre messagerie, relisez le message puis envoyez-le à SURVENUE.</p><a id="email-link" class="action dark" href="mailto:contact.signal.tm@gmail.com">Ouvrir ma messagerie ↗</a><p class="field-help">Si rien ne s’ouvre, copiez le texte ci-dessous dans un email à <a href="mailto:contact.signal.tm@gmail.com">contact.signal.tm@gmail.com</a>.</p><label for="message">Votre message</label><textarea id="message" rows="13" readonly></textarea><button type="button" id="copy" class="action">Copier le message</button><p id="copy-status" role="status"></p><button id="edit" type="button" class="text-link">← Modifier mes réponses</button></section>
 </div></main><footer class="intake-footer"><a href="mentions-legales.html">Mentions légales</a><a href="confidentialite.html">Confidentialité</a><a href="cgv.html">CGV</a></footer>
-<script src="onboarding.js" defer></script></body></html>
+<script src="onboarding.js?v=20260922b" defer></script></body></html>
