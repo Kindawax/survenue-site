@@ -28,3 +28,23 @@
 @media(max-width:1000px){.new-pricing{grid-template-columns:1fr}.new-pricing .offer,.new-pricing .offer:first-child{padding:32px}.new-pricing .offer.premium{border-left:0;border-top:1px solid var(--line)}.new-pricing .offer.recurring{border-left:0}.new-pricing .offer-top{min-height:0}.new-pricing .offer>p{max-width:none}.new-pricing .offer .action{max-width:420px}.pricing-note{grid-template-columns:1fr;gap:18px}}
 @media(max-width:540px){.new-pricing .offer,.new-pricing .offer:first-child{padding:30px 20px;margin-inline:0}.new-pricing .offer:first-child{padding-inline:0}.new-pricing .amount{font-size:64px}.pricing-note{font-size:12px}}
 @media(prefers-reduced-motion:reduce){.copper-material{animation:none!important;will-change:auto}.motion-ready .in-view-animate{opacity:1!important;transform:none!important}.immersive-copy h1>*{animation:none!important}.panels .opp{animation:none!important}html{scroll-behavior:auto}}
+/* Commercial clarity: keep the copper direction, bring the deliverable forward. */
+.redesign .immersive-copy h1{font-size:clamp(54px,7.2vw,116px)}
+.immersive-copy h1>em{padding-left:10vw}
+.hero-baseline>p{max-width:490px}
+.qualification{padding-block:30px 85px}
+.qualification h2{max-width:950px}
+.quality-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:35px;margin-top:40px}
+.quality-grid article{border-top:1px solid var(--line);padding-top:24px}
+.quality-grid article>span{font-size:10px;letter-spacing:.1em;color:var(--muted)}
+.quality-grid h3,.audience h3{font-size:24px;line-height:1.3;font-weight:500;letter-spacing:-.035em;margin:18px 0}
+.quality-grid p,.quality-note,.audience p,.audience dd{font-size:14px;line-height:1.8;color:var(--muted)}
+.quality-note{border-top:1px solid var(--line);padding-top:22px;margin-top:32px;max-width:900px}
+.audience{border-top:1px solid var(--line)}
+.audience-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:50px}
+.audience-grid article{padding:32px;background:#e9d8c3}
+.audience .label{font-size:10px;color:var(--ink)}
+.audience dl{margin:26px 0}
+.audience dt{font-size:12px;font-weight:700;margin-top:18px}
+.audience dd{margin:6px 0 0}
+@media(max-width:800px){.quality-grid{grid-template-columns:1fr;gap:24px}.audience-grid{grid-template-columns:1fr;gap:20px}.qualification{padding-bottom:65px}.redesign .immersive-copy h1{font-size:9vw}.immersive-copy h1>em{padding-left:0}.audience-grid article{padding:25px}}
