@@ -26,7 +26,7 @@
     <h1>Dites-nous qui vous cherchez.<em>Nous vérifierons ce que nous pouvons trouver.</em></h1>
     <p>Votre activité, votre cible et votre zone suffisent pour commencer. Nous préciserons ensuite les événements et les coordonnées qui vous seraient utiles.</p>
     <div class="intake-mini-flow" aria-label="Suite du parcours"><span>01 <strong>Votre cible</strong></span><span>02 <strong>Faisabilité vérifiée</strong></span><span>03 <strong>Offre confirmée avant paiement</strong></span></div>
-    <p class="intake-note">Aucun compte, aucune commande à cette étape. Cette page prépare un email que vous relisez avant de nous l’envoyer.</p>
+    <p class="intake-note">Aucun compte, aucune commande à cette étape. Votre demande nous parvient directement ; nous revenons vers vous par email.</p>
     <a href="mailto:contact.signal.tm@gmail.com">Vous préférez nous écrire directement ?</a>
   </aside>
   <div class="intake-card">
@@ -66,14 +66,16 @@
         <label for="company">Votre entreprise <span>(facultatif)</span></label><input id="company" name="company" autocomplete="organization" maxlength="150">
         <label for="email">Votre email *</label><input id="email" name="email" type="email" autocomplete="email" required maxlength="200">
       </div>
-      <p class="field-help">Vos réponses restent sur cette page jusqu’à votre action. Aucun envoi automatique ni sauvegarde sur le site. <a href="confidentialite.html">Confidentialité</a>.</p>
+      <div class="hp-field" aria-hidden="true"><label for="website">Ne pas remplir</label><input id="website" name="_honey" tabindex="-1" autocomplete="off"></div>
+      <p class="field-help">En cliquant sur « Envoyer ma demande », vos réponses sont transmises à SURVENUE par email pour étudier votre cible. Aucun paiement, aucun engagement. <a href="confidentialite.html">Confidentialité</a>.</p>
       <p id="error" role="alert"></p>
-      <button class="action dark" type="submit">Préparer ma demande <span aria-hidden="true">↗</span></button>
+      <button class="action dark" type="submit" id="submit">Envoyer ma demande <span aria-hidden="true">↗</span></button>
     </form>
-    <section id="ready" hidden><h2 tabindex="-1">Votre message est prêt.</h2><p><strong>Il n’a pas encore été envoyé.</strong> Ouvrez votre messagerie, vérifiez-le puis envoyez-le à SURVENUE.</p><a id="email-link" class="action dark" href="mailto:contact.signal.tm@gmail.com">Ouvrir ma messagerie ↗</a><p class="field-help">Si rien ne s’ouvre, copiez le message ci-dessous et envoyez-le à <a href="mailto:contact.signal.tm@gmail.com">contact.signal.tm@gmail.com</a>.</p><label for="message">Votre message</label><textarea id="message" rows="11" readonly></textarea><button type="button" id="copy" class="action">Copier le message</button><p id="copy-status" role="status"></p><button id="edit" type="button" class="text-link">← Modifier ma demande</button></section>
+    <section id="sent" hidden><p class="form-overline">DEMANDE ENVOYÉE</p><h2 tabindex="-1">Merci, c’est bien reçu.</h2><p>Votre demande est arrivée chez SURVENUE. Tom étudie votre cible et vous répond par email à <strong id="sent-email"></strong> pour confirmer ce qui est faisable, avant tout paiement.</p><a class="action dark" href="index.html">Retour à l’accueil <span aria-hidden="true">↗</span></a></section>
+    <section id="ready" hidden><h2 tabindex="-1">Votre message est prêt.</h2><p><strong>L’envoi automatique n’a pas abouti.</strong> Ouvrez votre messagerie, vérifiez le message puis envoyez-le à SURVENUE.</p><a id="email-link" class="action dark" href="mailto:contact.signal.tm@gmail.com">Ouvrir ma messagerie ↗</a><p class="field-help">Si rien ne s’ouvre, copiez le message ci-dessous et envoyez-le à <a href="mailto:contact.signal.tm@gmail.com">contact.signal.tm@gmail.com</a>.</p><label for="message">Votre message</label><textarea id="message" rows="11" readonly></textarea><button type="button" id="copy" class="action">Copier le message</button><p id="copy-status" role="status"></p><button id="edit" type="button" class="text-link">← Modifier ma demande</button></section>
   </div>
 </main>
 <footer class="intake-footer"><a href="mentions-legales.html">Mentions légales</a><a href="confidentialite.html">Confidentialité</a><a href="cgv.html">CGV</a></footer>
-<script src="onboarding.js?v=20260928a" defer></script>
+<script src="onboarding.js?v=20260928b" defer></script>
 </body>
 </html>

@@ -37,7 +37,11 @@
     `Précisions : ${value('details') || 'Aucune'}`
   ].join('\n');
 
-  form.addEventListener('submit', event => {
+  const endpoint = 'https://formsubmit.co/ajax/contact.signal.tm@gmail.com';
+  const submit = document.getElementById('submit');
+  const sent = document.getElementById('sent');
+
+  form.addEventListener('submit', async event => {
     event.preventDefault();
     error.textContent = '';
     if (value('activity').includes('[votre offre]')) {
@@ -55,6 +59,43 @@
     }
     const message = `Bonjour,\n\nJe souhaite voir ce que SURVENUE peut trouver pour ma prospection.\n\n${criteria()}\n\nNom : ${value('name')}\nEntreprise : ${value('company') || 'Non précisée'}\nEmail : ${value('email')}\n\nPouvez-vous me confirmer ce qui est faisable et le périmètre avant tout paiement ?\n\nBonne journée,\n${value('name')}`;
     document.getElementById('message').value = message;
+    submit.disabled = true;
+    submit.firstChild.textContent = 'Envoi en cours… ';
+    try {
+      const response = await fetch(endpoint, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({
+          _subject: `SURVENUE — nouvelle demande : ${value('name')}${value('company') ? ' (' + value('company') + ')' : ''}`,
+          _template: 'table',
+          _captcha: 'false',
+          _honey: value('website'),
+          Nom: value('name'),
+          Entreprise: value('company') || 'Non précisée',
+          email: value('email'),
+          'Offre envisagée': offer,
+          'Activité et cibles': value('activity'),
+          Zone: value('geography'),
+          Exclusions: value('exclusions') || 'Non précisées',
+          Événements: choices('events'),
+          'Informations utiles': choices('contacts'),
+          Rythme: value('frequency'),
+          Précisions: value('details') || 'Aucune'
+        })
+      });
+      const result = await response.json().catch(() => ({}));
+      if (!response.ok || String(result.success) !== 'true') throw new Error(result.message || response.status);
+      document.getElementById('sent-email').textContent = value('email');
+      form.hidden = true;
+      sent.hidden = false;
+      sent.querySelector('h2').focus();
+      return;
+    } catch {
+      // Fallback below: the visitor can still send the prepared email.
+    } finally {
+      submit.disabled = false;
+      submit.firstChild.textContent = 'Envoyer ma demande ';
+    }
     document.getElementById('email-link').href = 'mailto:contact.signal.tm@gmail.com?subject=' + encodeURIComponent('SURVENUE — ma recherche de prospects') + '&body=' + encodeURIComponent(message);
     form.hidden = true;
     ready.hidden = false;
