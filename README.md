@@ -1,37 +1,29 @@
-# Survenue — site (ex-Signal)
+# SURVENUE — site public
 
-Landing page statique de la marque SURVENUE (HTML / CSS / JS vanilla, aucune dépendance). Le dossier et le serveur de dev gardent le nom technique `signal-site`.
+Site statique HTML / CSS / JavaScript, hébergé sur Vercel via le dépôt GitHub `Kindawax/survenue-site`. Aucun build ni dépendance applicative. Le nom local `signal-site` est conservé comme chemin technique.
 
 ## Lancer en local
 
-```bash
+Depuis `C:\Users\TomMe\Downloads\files` :
+
+```powershell
 python -m http.server 5180 --directory signal-site
 ```
 
-Puis ouvrir http://localhost:5180 (depuis `C:\Users\TomMe\Downloads\files`). Un serveur `signal-site` est aussi déclaré dans `.claude/launch.json`.
+Ouvrir `http://localhost:5180/` dans un navigateur. Les pages légales et `criteres.html` sont servies directement.
 
-## Déployer
+## Structure
 
-Copier le dossier tel quel sur n'importe quel hébergeur statique (Netlify, Vercel, OVH, GitHub Pages…). Pas de build.
+- `index.html` : accueil, extrait réel anonymisé, méthode, trois offres, FAQ et contact.
+- `styles.css`, `home.css`, `copper.css` : base et identité crème / brun / cuivre.
+- `clarity.css` : hiérarchie de l’accueil, formes graphiques, fiche et parcours de demande.
+- `main.js` : menu mobile et CTA mobile contextuel.
+- `criteres.html`, `onboarding.css`, `onboarding.js` : demande de recherche sur une page, avec critères supplémentaires facultatifs.
+- `cgv.html`, `mentions-legales.html`, `confidentialite.html` : informations contractuelles et légales.
+- `favicon.svg`, `og-image.png`, `robots.txt`, `sitemap.xml` : assets et SEO technique.
 
-## Fichiers
+Le bouton principal mène au parcours de demande. Il prépare un email que le visiteur doit relire et envoyer lui-même ; aucune donnée n’est envoyée automatiquement au chargement ou à la validation du formulaire. Une copie du message reste possible si aucun logiciel de messagerie n’est configuré.
 
-- `index.html` — landing page (hero, exemple réel, problème, méthode, fiche, pour qui, signaux, tarifs, FAQ, CTA, footer)
-- `styles.css` — design system (palette, typo Inter, composants, responsive)
-- `main.js` — nav mobile, bordure sticky, apparition au scroll (avec filet de sécurité)
-- `mentions-legales.html`, `confidentialite.html` — pages légales (champs « à compléter » signalés)
-- `favicon.svg`
+Le site affiche le test à 49 €, l’offre Essentiel à 149 €/mois et Prospection prête à 299 €/mois. Le choix de l’offre est transmis comme paramètre autorisé à `criteres.html` ; le paiement est cadré séparément. Cette refonte ne modifie aucun Payment Link Stripe.
 
-## À compléter avant mise en ligne
-
-- Mentions légales : adresse, SIREN, hébergeur.
-- Domaine + `og:image` (aucune image Open Graph pour l'instant).
-- Le lien de paiement Stripe est `https://buy.stripe.com/cNi8wO5a39Pne6p6eC5AQ00` (5 CTA : nav desktop, menu mobile, hero, pricing, CTA final).
-
-## Parcours de cadrage — septembre 2026
-
-`criteres.html`, `onboarding.css`, `onboarding.js` : trois étapes (cible, informations utiles, coordonnées et récapitulatif). Les CTA de cadrage pointent vers cette page ; le paramètre `offre` ne contient qu'un nom d'offre autorisé. Aucun renseignement personnel n'est placé dans l'URL du site.
-
-Le parcours prépare un email, il ne soumet rien à un serveur. Le visiteur ouvre sa messagerie et envoie lui-même le message. Une option de copie est disponible si aucun logiciel email n'est configuré. Aucun cookie, stockage local, analytics ni prestataire de formulaire ajouté. Sans JavaScript, le contact email reste visible. Les prix, Stripe, DNS et hébergement ne changent pas.
-
-Limite : pas de confirmation de réception ni de mesure des demandes abandonnées. Un formulaire hébergé pourra remplacer cette sortie après choix du prestataire et adaptation des informations de confidentialité.
+Les informations juridiques encore manquantes restent à compléter lorsque l’entreprise sera créée. Le parcours mailto ne permet pas de mesurer les demandes abandonnées ni de confirmer la réception du message ; un vrai formulaire nécessiterait un service de réception et une mise à jour des informations de confidentialité.
