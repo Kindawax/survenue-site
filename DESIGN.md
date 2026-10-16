@@ -1,21 +1,17 @@
-# SURVENUE — identité 3
+# SURVENUE — typographies et couleurs de l’identité 1
 
-Refonte du 16 octobre 2026 à partir des deux PDF fournis par la graphiste.
+## Palette fournie
 
-## Identité
+- Corail : `#D55840`
+- Pêche : `#F19B66`
+- Rouille : `#9D461B`
+- Doré : `#E7A34E`
+- Cacao : `#825242`
 
-- Ivoire : `#F8F5E9`
-- Olive : `#918B40`
-- Brun : `#472421`
-- Sable doré : `#D9C38C`
-- Encre : `#261F23`
-
-Le logo et le monogramme SVG reprennent les tracés vectoriels de l’identité 3 dans le PDF, sans les redessiner avec une police. Les titres utilisent Familjen Grotesk Medium et le texte courant Montserrat Regular, d’après la première proposition du dossier et la demande du propriétaire. Les polices sont hébergées localement sous licence SIL OFL, avec leurs licences dans assets/fonts/.
+Fond crème `#FFF8F1` et encre sombre `#20100C` en accompagnement pour la lisibilité. Titres en Familjen Grotesk Medium, texte en Montserrat Regular, polices hébergées localement sous licence SIL OFL.
 
 ## Application
 
-`identity-3.css` constitue l’unique feuille de styles active des six pages. Les anciennes feuilles restent dans le dépôt pour référence, sans être chargées.
+`identity-1.css` constitue la feuille commune aux six pages. Fond crème, titres rouille, textes cacao, illustration pêche et corail, sections corail et dorées. Textes sombres sur les aplats chauds pour maintenir le contraste. Le tracé vectoriel du logo précédemment choisi est conservé, recoloré dans la nouvelle palette, ainsi que le monogramme.
 
-Accueil éditorial ivoire, fiche illustrative sur fond olive et dégradé, sections sable et olive, offre Essentiel brune, navigation et formulaire adaptés au mobile. Logo vectoriel commun aux pages légales, favicon et nouvelle image de partage.
-
-La présentation vidéo, ses fichiers et ses crédits ont été retirés à la demande du propriétaire. Les offres, tarifs, contenus métier et le traitement FormSubmit sont conservés. Les apparitions respectent la préférence de réduction des mouvements.
+La vidéo reste retirée. Les contenus, tarifs et traitement du formulaire sont conservés. Mise à jour de la prévisualisation uniquement, en attente de validation pour survenue.com.

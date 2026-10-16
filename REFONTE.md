@@ -1,6 +1,6 @@
 # Refonte — 16 octobre 2026
 
-Identité 3 de la graphiste, avec Familjen Grotesk Medium et Montserrat de la proposition 1 à la demande du propriétaire. Logo vectoriel exact et palette d’origine. Six pages harmonisées, vidéo retirée.
+Typographies et palette de l’identité 1 de la graphiste : Familjen Grotesk Medium, Montserrat Regular, corail, pêche, rouille, doré et cacao. Le tracé du logo existant est conservé et recoloré. Six pages harmonisées, vidéo retirée.
 
 Validation locale : accueil à 1440 et 390 px, menu mobile et fermeture Échap, FAQ, tableau comparatif, sélection Essentiel, préremplissage Formation, erreurs de formulaire vide et de cible non personnalisée, liens et assets locaux des six pages. Aucun envoi réel ni paiement. Aucune erreur JavaScript observée lors des interactions testées. Pas de débordement horizontal à 390 px sur les six pages.
 

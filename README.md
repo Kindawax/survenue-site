@@ -15,7 +15,7 @@ Ouvrir http://127.0.0.1:5180/.
 ## Structure
 
 - `index.html` : accueil, exemple, méthode, trois offres, FAQ et contact.
-- `identity-3.css` : feuille de styles commune de la refonte.
+- `identity-1.css` : feuille de styles commune de la refonte.
 - `assets/logo-*.svg`, `assets/monogram.svg` : tracés extraits des PDF de la graphiste.
 - `assets/fonts/` : Familjen Grotesk Medium pour les titres, Montserrat pour le texte et leurs licences.
 - `main.js` : navigation mobile, progression, liens actifs et apparitions.
