@@ -1,11 +1,7 @@
-# Refonte SURVENUE — 19 septembre 2026
+# Refonte — 16 octobre 2026
 
-Direction actuelle : crème, cuivre et brun, précisée dans DESIGN.md. La première direction vert forêt / citron a été remplacée à la demande de l’utilisateur. La page d’accueil utilise styles.css, home.css et copper.css. Les pages légales conservent leur présentation.
+Identité 3 de la graphiste, avec Lora en remplacement de Melodrama à la demande du propriétaire. Logo vectoriel exact et palette d’origine. Six pages harmonisées, vidéo retirée.
 
-Parcours : proposition de valeur → deux exemples sélectionnables → méthode → offres → FAQ → contact.
+Validation locale : accueil à 1440 et 390 px, menu mobile et fermeture Échap, FAQ, tableau comparatif, sélection Essentiel, préremplissage Formation, erreurs de formulaire vide et de cible non personnalisée, liens et assets locaux des six pages. Aucun envoi réel ni paiement. Aucune erreur JavaScript observée lors des interactions testées. Pas de débordement horizontal à 390 px sur les six pages.
 
-Le test de 5 opportunités à 49 € commence par un email prérempli pour confirmer critères, faisabilité et délai avant règlement. Aucun email n’est envoyé automatiquement. Les paiements existants ne sont pas modifiés.
-
-Contrôles réalisés dans le navigateur : rendu ordinateur et mobile 390 px, sélection des deux exemples, menu mobile avec fermeture Échap, absence de débordement horizontal, liens internes de la page, absence d’erreurs console. Aucune transaction ni aucun envoi de message effectué.
-
-Statut : version locale, non publiée. Les renseignements légaux et fiscaux encore incomplets dans les documents existants restent à compléter par le responsable du site. Aucune donnée commerciale interne ni statut client n’a été modifié.
+Branche locale : design/identite-3. La mise en ligne Vercel dépend de l’envoi des modifications au dépôt GitHub. Ce fichier ne certifie pas un déploiement.

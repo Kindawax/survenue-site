@@ -1,42 +1,21 @@
-# SURVENUE — direction cuivre
+# SURVENUE — identité 3
 
-Premier jet éditorial et immersif, demandé le 19 septembre 2026. Remplace la direction vert forêt / citron.
+Refonte du 16 octobre 2026 à partir des deux PDF fournis par la graphiste.
 
-## Palette
+## Identité
 
-- Brun profond : `#2d1b14`
-- Encre : `#35231b`
-- Cuivre : `#bd7a49`
-- Sable doré : `#e4b783`
-- Crème : `#f0e5d6`
-- Texte secondaire : `#715c4c`
+- Ivoire : `#F8F5E9`
+- Olive : `#918B40`
+- Brun : `#472421`
+- Sable doré : `#D9C38C`
+- Encre : `#261F23`
 
-Image fournie par l’utilisateur : `assets/copper-texture.jpg`, environ 73 Ko. Utilisée comme matière de fond sur ce premier jet, sans incorporation de visuels appartenant aux sites de référence.
+Le logo et le monogramme SVG reprennent les tracés vectoriels de l’identité 3 dans le PDF, sans les redessiner avec une police. Lora Regular remplace Melodrama pour les titres à la demande du propriétaire. Lora est hébergée localement, sous licence SIL OFL (assets/fonts/Lora-LICENSE.txt). Le texte courant utilise Microsoft Yi Baiti si la police est installée, avec Helvetica Neue / Arial en repli. Aucune police Microsoft n’est distribuée.
 
-## Composition
+## Application
 
-Ouverture plein écran, typographie Manrope de grande taille et italique Georgia. Grands espaces éditoriaux, alternance de fonds crème et brun, fiches documentaires, pied de page avec signature surdimensionnée.
+`identity-3.css` constitue l’unique feuille de styles active des six pages. Les anciennes feuilles restent dans le dépôt pour référence, sans être chargées.
 
-Références consultées : Driessen Architectuur (ouverture immersive), Boc Studio / work (présentation de projets), Maison Auge (typographie monumentale et image dominante). Elles servent de repères visuels, pas de modèles à recopier.
+Accueil éditorial ivoire, fiche illustrative sur fond olive et dégradé, sections sable et olive, offre Essentiel brune, navigation et formulaire adaptés au mobile. Logo vectoriel commun aux pages légales, favicon et nouvelle image de partage.
 
-## Mouvement
-
-- Déplacement et zoom lents de la matière en fond.
-- Apparition du titre à l’ouverture.
-- Révélation des sections au défilement.
-- Transition lors du choix d’un exemple.
-- Réactions discrètes au survol des liens et pictogrammes.
-- Bouton pause visible ; préférence système de mouvement réduit respectée.
-
-Pas de défilement forcé, curseur personnalisé ou dépendance d’animation externe.
-
-## Fichiers
-
-`styles.css` : base historique, également utilisée par les pages légales.
-`home.css` : structure de la page d’accueil.
-`copper.css` : direction artistique actuelle et adaptations mobiles.
-`main.js` : navigation, sélection des exemples, mouvement et pause.
-
-## État
-
-Version locale, non publiée. Contrôles navigateur ordinateur et mobile : menu, pause, exemples, liens internes et console. Les données commerciales, tarifs et liens de contact restent ceux du projet ; aucune opération Stripe ni aucun email n’a été envoyé.
+La présentation vidéo, ses fichiers et ses crédits ont été retirés à la demande du propriétaire. Les offres, tarifs, contenus métier et le traitement FormSubmit sont conservés. Les apparitions respectent la préférence de réduction des mouvements.
