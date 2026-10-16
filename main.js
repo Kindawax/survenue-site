@@ -30,6 +30,8 @@
     let heroVisible = true;
     let contactVisible = false;
     let nudged = false;
+    mobileIntake.classList.add('is-away');
+    mobileIntake.inert = true;
     mobileIntake.hidden = false;
     const refresh = () => {
       const away = heroVisible || contactVisible;
@@ -110,16 +112,4 @@
   const steps = document.querySelector('.method .steps');
   if (steps) revealed.observe(steps);
 
-  // Gentle 3D tilt of the hero card for precise pointers.
-  const card = document.querySelector('.clarity-card');
-  const visual = document.querySelector('.clarity-hero__visual');
-  if (card && visual && matchMedia('(hover: hover) and (pointer: fine)').matches) {
-    visual.addEventListener('pointermove', event => {
-      const box = visual.getBoundingClientRect();
-      const x = (event.clientX - box.left) / box.width - .5;
-      const y = (event.clientY - box.top) / box.height - .5;
-      card.style.transform = `perspective(1100px) rotateY(${x * 7}deg) rotateX(${-y * 6}deg)`;
-    });
-    visual.addEventListener('pointerleave', () => { card.style.transform = ''; });
-  }
 })();
