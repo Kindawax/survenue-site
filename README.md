@@ -17,7 +17,7 @@ Ouvrir http://127.0.0.1:5180/.
 - `index.html` : accueil, exemple, méthode, trois offres, FAQ et contact.
 - `identity-3.css` : feuille de styles commune de la refonte.
 - `assets/logo-*.svg`, `assets/monogram.svg` : tracés extraits des PDF de la graphiste.
-- `assets/fonts/Lora-Regular.ttf` et sa licence : police locale des titres.
+- `assets/fonts/` : Familjen Grotesk Medium pour les titres, Montserrat pour le texte et leurs licences.
 - `main.js` : navigation mobile, progression, liens actifs et apparitions.
 - `criteres.html`, `onboarding.js` : formulaire de demande.
 - `prospection-commerces.html` : présentation sectorielle.

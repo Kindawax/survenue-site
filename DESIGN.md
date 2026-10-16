@@ -10,7 +10,7 @@ Refonte du 16 octobre 2026 à partir des deux PDF fournis par la graphiste.
 - Sable doré : `#D9C38C`
 - Encre : `#261F23`
 
-Le logo et le monogramme SVG reprennent les tracés vectoriels de l’identité 3 dans le PDF, sans les redessiner avec une police. Lora Regular remplace Melodrama pour les titres à la demande du propriétaire. Lora est hébergée localement, sous licence SIL OFL (assets/fonts/Lora-LICENSE.txt). Le texte courant utilise Microsoft Yi Baiti si la police est installée, avec Helvetica Neue / Arial en repli. Aucune police Microsoft n’est distribuée.
+Le logo et le monogramme SVG reprennent les tracés vectoriels de l’identité 3 dans le PDF, sans les redessiner avec une police. Les titres utilisent Familjen Grotesk Medium et le texte courant Montserrat Regular, d’après la première proposition du dossier et la demande du propriétaire. Les polices sont hébergées localement sous licence SIL OFL, avec leurs licences dans assets/fonts/.
 
 ## Application
 
